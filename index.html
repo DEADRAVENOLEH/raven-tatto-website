@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAVEN TATTO</title>
+    <title>RAVEN タトゥー</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
+
+    <!-- Прелоадер с анимацией тату-машинки -->
     <div class="preloader">
-        <span class="loading-text">Загрузка...</span>
+        <img src="assets/oni-mask.png" class="oni-mask" alt="Они">
+        <span class="tattoo-text">RAVEN タトゥー</span>
     </div>
 
+    <!-- Основной контент -->
     <header>
         <h1 class="title">RAVEN タトゥー</h1>
     </header>
@@ -21,5 +25,11 @@
         <a href="https://t.me/raviii_gg" class="button">Записаться в Telegram</a>
         <a href="https://instagram.com/raven.oleh" class="button">Instagram</a>
     </main>
+
+    <!-- Фоновый звук дождя -->
+    <audio id="rain-audio" autoplay loop>
+        <source src="assets/rain-sound.mp3" type="audio/mp3">
+    </audio>
+
 </body>
 </html>
