@@ -1,131 +1,66 @@
-/* Сброс стандартных стилей */
-* {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Основной фон */
-body {
-    background: url('/assets/tokyo-background.jpg') no-repeat center center fixed;
+    background: url('https://deadravenoleh.github.io/raven-tatto-website/assets/tokyo-background.jpg') no-repeat center center fixed;
     background-size: cover;
-    font-family: Arial, sans-serif;
     color: white;
     text-align: center;
-    overflow: hidden;
 }
 
-/* Прелоадер */
-.preloader {
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+}
+
+.logo {
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.japanese {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff0000;
+}
+
+#preloader {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10000;
-    transition: opacity 1s ease-out;
 }
 
-.preloader img {
+#preloader img {
     width: 150px;
-    height: auto;
-    animation: fadeIn 1.5s ease-in-out infinite alternate;
+    animation: fadeIn 2s;
 }
 
-.preloader.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-/* Контейнер */
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    z-index: 10;
-    position: relative;
-}
-
-.container.loaded {
-    opacity: 1;
-}
-
-/* Заголовок */
-h1 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-shadow: 3px 3px 10px rgba(255, 0, 255, 0.8);
-    position: relative;
-    z-index: 10;
-}
-
-/* Кнопки */
-.button {
-    background-color: rgba(0, 0, 0, 0.8);
-    border: 2px solid rgba(255, 0, 255, 0.8);
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    position: relative;
-    overflow: hidden;
-    z-index: 10;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-.button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 0, 255, 0.2);
-    transition: all 0.3s ease-in-out;
-}
-
-.button:hover::before {
-    left: 100%;
-}
-
-.button:hover {
-    background-color: rgba(255, 0, 255, 0.5);
-    transform: scale(1.05);
-}
-
-/* Медиа-запрос для мобильных */
-@media screen and (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    .button {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
-
-    .preloader img {
-        width: 100px;
-    }
-}
-
-/* Анимация появления */
 @keyframes fadeIn {
-    from {
-        opacity: 0.5;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
