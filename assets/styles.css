@@ -1,62 +1,77 @@
-body {
-    font-family: 'Noto Sans JP', sans-serif;
-    background: url('assets/tokyo-background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    text-align: center;
+/* Сбрасываем стандартные отступы и делаем полноэкранный фон */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-header h1 {
-    font-size: 3em;
-    margin-top: 50px;
-}
-
-.japanese {
-    font-family: 'Noto Sans JP', sans-serif;
-    color: red;
-}
-
-.button {
-    display: inline-block;
-    margin: 15px;
-    padding: 10px 20px;
-    background: rgba(255, 0, 0, 0.7);
+body {
+    background: url('assets/tokyo-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
     color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: 0.3s;
-    border-radius: 5px;
+    text-align: center;
+}
+
+/* Основной контейнер */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Стили для заголовка */
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 3px 3px 10px rgba(255, 0, 255, 0.8);
+}
+
+/* Кнопки */
+.button {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(255, 0, 255, 0.8);
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Анимация появления кнопок */
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 0, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover::before {
+    left: 100%;
 }
 
 .button:hover {
-    background: rgba(255, 0, 0, 1);
+    background-color: rgba(255, 0, 255, 0.5);
+    transform: scale(1.05);
 }
 
-.preloader {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 1000;
-}
+/* Медиа-запрос для мобильных */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
 
-.preloader img {
-    width: 100px;
-    height: 100px;
-}
-
-.preloader-text {
-    color: white;
-    font-size: 1.5em;
-    margin-top: 10px;
-}
-
-.hidden {
-    display: none;
+    .button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
 }
