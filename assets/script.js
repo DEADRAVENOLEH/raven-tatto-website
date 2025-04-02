@@ -1,9 +1,9 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let preloader = document.querySelector(".preloader");
-    let backgroundAudio = document.getElementById("background-audio");
+document.addEventListener("DOMContentLoaded", function () {
+    const preloader = document.querySelector(".preloader");
+    const container = document.querySelector(".container");
 
     setTimeout(() => {
-        preloader.classList.add("hidden");
-        backgroundAudio.play(); 
+        preloader.classList.add("hidden"); // Скрываем прелоадер
+        container.classList.add("loaded"); // Показываем контент
     }, 3000);
 });
