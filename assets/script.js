@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(() => {
         preloader.classList.add("hidden"); // Убираем прелоадер
-        container.classList.add("loaded"); // Показываем контент
-    }, 3000);
+        setTimeout(() => {
+            container.classList.add("loaded"); // Показываем контент
+        }, 500); // Задержка для плавного перехода
+    }, 2500);
 });
