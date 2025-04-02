@@ -3,33 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAVEN タトゥー</title>
-    <link rel="stylesheet" href="style.css">
+    <title>RAVEN TATTO</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
 
-    <!-- Прелоадер с анимацией тату-машинки -->
-    <div class="preloader">
-        <img src="assets/oni-mask.png" class="oni-mask" alt="Они">
-        <span class="tattoo-text">RAVEN タトゥー</span>
+    <!-- Прелоадер с облаком Акацуки -->
+    <div id="preloader">
+        <img src="akatsuki-cloud.png" alt="Akatsuki Cloud">
+        <audio id="tattooSound" src="tattoo-machine.mp3"></audio>
     </div>
 
-    <!-- Основной контент -->
+    <!-- Заголовок -->
     <header>
-        <h1 class="title">RAVEN タトゥー</h1>
+        <h1 class="japanese">RAVEN タトゥー</h1>
     </header>
 
+    <!-- Основной контент -->
     <main>
-        <p>Добро пожаловать в мир неоновых татуировок!</p>
-        <a href="https://t.me/raviii_gg" class="button">Записаться в Telegram</a>
-        <a href="https://instagram.com/raven.oleh" class="button">Instagram</a>
+        <section class="hero">
+            <h2>Татуировки в японском стиле</h2>
+            <p>Искусство татуировки, переданное через века</p>
+            <a href="https://t.me/raviii_gg" class="button">Наш Telegram</a>
+            <a href="https://www.instagram.com/raven.oleh/" class="button">Instagram</a>
+        </section>
     </main>
-
-    <!-- Фоновый звук дождя -->
-    <audio id="rain-audio" autoplay loop>
-        <source src="assets/rain-sound.mp3" type="audio/mp3">
-    </audio>
 
 </body>
 </html>
